@@ -20,3 +20,5 @@ delete kan ende med at slette for meget data hvis der bliver tilføjet noget nyt
 Der mangler en måde for brugeren at give en condition til programmet.
 
 check functionen bør erstattes med errorhandling til hver unikke tilfælde og programmet bør nedbrydes yderligere.
+
+2h 49m
