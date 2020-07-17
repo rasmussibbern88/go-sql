@@ -21,4 +21,7 @@ Der mangler en måde for brugeren at give en condition til programmet.
 
 check functionen bør erstattes med errorhandling til hver unikke tilfælde og programmet bør nedbrydes yderligere.
 
+Det vil være bedre at bruge blake2 istedet for md5, alternativt crc32
+
+Tid brugt 
 2h 49m
