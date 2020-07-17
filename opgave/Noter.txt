@@ -24,4 +24,4 @@ check functionen bør erstattes med errorhandling til hver unikke tilfælde og p
 Det vil være bedre at bruge blake2 istedet for md5, alternativt crc32
 
 Tid brugt 
-2h 49m
+6 Timer
