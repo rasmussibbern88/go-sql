@@ -1,0 +1,22 @@
+given id
+
+select write confirm delete
+
+select query can should be able to return any number of rows
+
+write must be able to handle "any" amount of data
+
+confirm by checksum or hashing (md5, correction code)
+
+delete only when data that should be written is the same as the data that has been written. flush -> close -> open - read - close
+
+Mit første program i golang.
+Jeg anvendte postgres, da det var installeret og sqlite driveren til golang ikke kunne installere pga. en manglende c compiler, men hvis programmet skal anvendes med en anden database er det bare at skifte linje 13. Programmet kører en sql query og går igennem resultaterne og skriver en linje med de 4 værdier i databasen til en fil der er genereret ved programstart. programmet tilføjer løbende den skrevne data til et md5 object, som til sidst hasher værdien og sammenligner den værdi med hashen af filen efter den er lukket og åbnet igen.
+
+Der er ikke lavet nogle checks for hvad der vil ske med en tom sql query
+
+delete kan ende med at slette for meget data hvis der bliver tilføjet noget nyt data i perioden fra select er eksekveret og delete er eksekveret.
+
+Der mangler en måde for brugeren at give en condition til programmet.
+
+check functionen bør erstattes med errorhandling til hver unikke tilfælde og programmet bør nedbrydes yderligere.
